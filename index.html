@@ -25,12 +25,17 @@
         </header>
         <img class="post-img" alt="User Post" src="./src/images/post-vangogh.jpg"/>
         <div class="actions">
-          <img class="like" src="./src/images/heart-icon-2.svg" class="icon"/>
-          <img class="comment" src="./src//images/icon-comment.png" class="icon"/>
-          <img class="message" src="./src/images/icon-dm.png" class="icon"/>
+          <img role="button" tabindex="0" class="like" src="./src/images/heart-icon-2.svg" class="icon"/>
+          <img role="button" tabindex="0" class="comment" src="./src//images/icon-comment.png" class="icon"/>
+          <img role="button" tabindex="0" class="message" src="./src/images/icon-dm.png" class="icon"/>
         </div>
-        <h4 id="username">vincey1853</h4>
-        <p>just took a few mushrooms lol</p>
+        <div class="post-info">
+          <h4 class="likes"><span>21,492</span> likes</h4>
+          <div class="inner-post-container">
+            <h4 class="username">vincey1853</h4>
+            <p>just took a few mushrooms lol</p>
+          </div>
+        </div>
       </section>
     </main>
     <script type="module" src="/src/main.js"></script>
