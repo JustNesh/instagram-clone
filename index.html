@@ -3,12 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="./public/favicon.ico"/>
-    <link rel="stylesheet" href="./src/main.js"/>
+    <link rel="stylesheet" href="./src/style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instagram Clone</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header>
+      <div class="container" id="header-container">
+        <img id="logo" alt="Oldagram Logo in cursive text" src="./src/images/logo.png">
+        <img id="user-photo" alt="Profile Photo of User" src="./src/images/user-avatar.png" />
+      </div>
+    </header>
+    <main>
+      <section class="container post">
+        <header class="post-header">
+          <img class="poster-profile-pic" alt="" src="./src/images/avatar-vangogh.jpg"/>
+          <div class="column inner-post-header">
+            <h2>Vincent van Gogh</h2>
+            <h3>Zudert, Netherlands</h3>
+          </div>
+        </header>
+        <img class="post-img" alt="User Post" src="./src/images/post-vangogh.jpg"/>
+        <div class="actions">
+          <img class="like" src="./src/images/icon-heart.png" class="icon"/>
+          <img class="comment" src="./src//images/icon-comment.png" class="icon"/>
+          <img class="message" src="./src/images/icon-dm.png" class="icon"/>
+        </div>
+        <h4 id="username">vincey1853</h4>
+        <p>just took a few mushrooms lol</p>
+      </section>
+    </main>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
