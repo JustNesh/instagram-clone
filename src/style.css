@@ -67,20 +67,25 @@ h3{
 .actions{
   display: flex;
   justify-content: start;
-  padding: 15px 10px;
-  gap: 20px;
+  padding: 12.5px 5px 0px 5px;
 }
 
 .like, .comment, .message{
   object-fit: contain;
   width: 35px;
+  margin-right: 15px;
   cursor: pointer;
 }
 
+.like{
+  width: 45px;
+  margin-right: 10px;
+}
+
 .like:active, .like:hover{
-  content: url(images/red-heart-icon.svg);
-  width: 33px;
-  padding-right: 2px;
+  content: url(images/red-heart-icon2.svg);
+  /* width: 33px;
+  padding-right: 2px; */
 }
 /* Utility Classes */
 
