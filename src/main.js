@@ -3,8 +3,8 @@ let posts = [
         name: "Vincent van Gogh",
         username: "vincey1853",
         location: "Zundert, Netherlands",
-        avatar: "./src/images/avatar-vangogh.jpg",
-        post: "./src/images/post-vangogh.jpg",
+        avatar: "/images/avatar-vangogh.jpg",
+        post: "/images/post-vangogh.jpg",
         comment: "just took a few mushrooms lol",
         likes: 21,
         userLiked: false,
@@ -13,8 +13,8 @@ let posts = [
         name: "Gustave Courbet",
         username: "gus1819",
         location: "Ornans, France",
-        avatar: "./src/images/avatar-courbet.jpg",
-        post: "./src/images/post-courbet.jpg",
+        avatar: "/images/avatar-courbet.jpg",
+        post: "/images/post-courbet.jpg",
         comment: "i'm feelin a bit stressed tbh",
         likes: 4,
         userLiked: false,
@@ -23,8 +23,8 @@ let posts = [
         name: "Joseph Ducreux",
         username: "jd1735",
         location: "Paris, France",
-        avatar: "./src/images/avatar-ducreux.jpg",
-        post: "./src/images/post-ducreux.jpg",
+        avatar: "/images/avatar-ducreux.jpg",
+        post: "/images/post-ducreux.jpg",
         comment: "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
         likes: 152,
         userLiked: false,
@@ -44,8 +44,7 @@ let posts = [
 const mainEl = document.querySelector("main");
 
 
-const displayPost = () =>{
-  //<img id="like-button-${i}" role="button" tabindex="0" class="like" src="./src/images/heart-icon-2.svg" class="icon"/> 
+const displayPost = () =>{ 
   for (let i=0; i<posts.length; i++){
     let newPost = `
       <section class="container post">
@@ -59,8 +58,8 @@ const displayPost = () =>{
           <img class="post-img" id="post-img-${i}" alt="User Post" src="${posts[i].post}"/>
           <div class="actions">
             <div class="like drop-shadow" id="like-button-${i}"></div>
-            <img role="button" tabindex="0" class="comment drop-shadow" src="./src//images/icon-comment.png" class="icon"/>
-            <img role="button" tabindex="0" class="message drop-shadow" src="./src/images/icon-dm.png" class="icon"/>
+            <img role="button" tabindex="0" class="comment drop-shadow" src="/images/icon-comment.png" class="icon"/>
+            <img role="button" tabindex="0" class="message drop-shadow" src="/images/icon-dm.png" class="icon"/>
           </div>
           <div class="post-info">
             <h4 class="likes"><span id="posts-likes-${i}">${posts[i].likes}</span> likes</h4>
@@ -82,7 +81,7 @@ const handleLikeButton = (i) =>{
   // Styling options in this prevents any weird CSS side effects that cause the
   // image to be out of place.
   if(isPostLiked(i) === true){
-    likeButtonEl.style.backgroundImage = "url(./src/images/red-heart-icon2.svg)"
+    likeButtonEl.style.backgroundImage = "url(/images/red-heart-icon2.svg)"
       likeButtonEl.style.width = "45px";
       likeButtonEl.style.height = "45px";
       likeButtonEl.style.marginLeft = "0px";
@@ -90,7 +89,7 @@ const handleLikeButton = (i) =>{
       likeButtonEl.parentElement.style.marginLeft = "-6.5px";    
     posts[i].likes+=1;
   } else {
-        likeButtonEl.style.backgroundImage = "url(./src/images/icon-heart.png)"
+        likeButtonEl.style.backgroundImage = "url(/images/icon-heart.png)"
       likeButtonEl.style.width = "33px";
       likeButtonEl.style.height = "33px";
       likeButtonEl.style.marginLeft = "0px";
