@@ -3,9 +3,11 @@
   src: url(../public/SourceSans3-VariableFont_wght.ttf);
 }
 
+
 body{
   background-color: #EFF;
   font-family: "Source Sans Pro";
+  margin: 0;
 }
 
 .container{
