@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#Random
+/src/images/goku-post.webp
+/src/images/goku-profile-pic.webp
