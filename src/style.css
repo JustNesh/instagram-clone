@@ -50,6 +50,7 @@ body{
 }
 
 .post-header{
+  height: 40px;
   display: flex;
   justify-content: start;
   padding: 5px 10px;
