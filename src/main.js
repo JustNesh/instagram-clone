@@ -35,7 +35,7 @@ let posts = [
         location: "idk somewhere over the rainbow or something",
         avatar: "https://tse3.mm.bing.net/th/id/OIP.50IRKlbiu8svY_jD1zC85gAAAA?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
         post: "https://nails.newsela.com/s3/newsela-media/article_media/2016/12/primary-source-ben-franklin-kite-electricity-d21c2b12.jpg?crop=0,18,1366,787&height=498&horizontal_focal_point=center&vertical_focal_point=center&width=885",
-        comment: "I seem to have casted Lightning Bolt",
+        comment: "I seem to have casted Lightning Bolt!",
         likes: 102,
         userLiked: false,
     }
@@ -85,7 +85,7 @@ const handleLikeButton = (i) =>{
       likeButtonEl.style.width = "45px";
       likeButtonEl.style.height = "45px";
       likeButtonEl.style.marginLeft = "0px";
-      likeButtonEl.style.marginRight = "9px";
+      likeButtonEl.style.marginRight = "8.75px";
       likeButtonEl.parentElement.style.marginLeft = "-6.5px";    
     posts[i].likes+=1;
   } else {
@@ -93,7 +93,7 @@ const handleLikeButton = (i) =>{
       likeButtonEl.style.width = "33px";
       likeButtonEl.style.height = "33px";
       likeButtonEl.style.marginLeft = "0px";
-      likeButtonEl.style.marginRight = "15px";    
+      likeButtonEl.style.marginRight = "14.5px";    
       likeButtonEl.parentElement.style.marginLeft = "0px";
     posts[i].likes-=1;
   }
@@ -108,10 +108,16 @@ const addEventListenerToPosts = () =>{
     likeButtonEl.addEventListener("click", () =>{
       handleLikeButton(i);
     })
+    likeButtonEl.addEventListener("touchend", () =>{
+      handleLikeButton(i);
+    })
 
     //Allows user to double click the post to like the post!
     const postImgEl = document.getElementById(`post-img-${i}`);
     postImgEl.addEventListener("dblclick", ()=>{
+      handleLikeButton(i);
+    })
+    postImgEl.addEventListener("touchend", ()=>{
       handleLikeButton(i);
     })
   }

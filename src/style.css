@@ -43,6 +43,8 @@ body{
   flex-direction: column;
   justify-content: start;
   border-bottom: 20px solid #f0f0f0;
+  border-right: 2px solid #f0f0f0;
+  border-left: 2px solid #f0f0f0;
 }
 
 .post:nth-last-of-type(1) {
@@ -94,7 +96,7 @@ h3{
 .like{
   width: 33px;
   height: 33px;
-  margin-right: 15px;
+  margin-right: 14.5px;
   background-image: url(../images/icon-heart.png);
   background-repeat: no-repeat;
   background-size: contain;
