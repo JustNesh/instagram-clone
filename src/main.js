@@ -108,16 +108,10 @@ const addEventListenerToPosts = () =>{
     likeButtonEl.addEventListener("click", () =>{
       handleLikeButton(i);
     })
-    likeButtonEl.addEventListener("touchend", () =>{
-      handleLikeButton(i);
-    })
 
     //Allows user to double click the post to like the post!
     const postImgEl = document.getElementById(`post-img-${i}`);
     postImgEl.addEventListener("dblclick", ()=>{
-      handleLikeButton(i);
-    })
-    postImgEl.addEventListener("touchend", ()=>{
       handleLikeButton(i);
     })
   }
